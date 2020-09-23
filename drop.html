@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function myFunction() {
+    var Laptop=['HP','Lenovo','Dell'];
+    var Mobile=['Iphone','Samsung','Nokia'];
+    var Tv=['Colors','Lifes Good','Sonytv'];
+    var printThis='<ol>';
+    var x = document.getElementById("mySelect").value;
+ 
+    if(x==0)
+    {
+        Laptop.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    else if(x==1)
+    {
+        Mobile.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    else if(x==2)
+    {
+        Tv.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    document.getElementById("demo").innerHTML = printThis;
+}
+
+    </script>
+</head>
+<body>
+    <select id="mySelect" onchange="myFunction()">
+        <option >--select--
+        <option value="0" style = "background-color: tomato;">Laptop
+       
+        <option value="1" style = "background-color: turquoise;">mobile
+        <option value="2" style = "background-color: chocolate;"> Tv
+            
+        </option>
+      </select>
+      
+      
+      
+      <div id="demo" style = "background-color: violet;"></div>
+</body>
+</html>
